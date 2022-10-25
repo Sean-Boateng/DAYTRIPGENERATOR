@@ -2,7 +2,7 @@
 # (5 points):  As a developer, I want to store my destinations, restaurants, mode of transportation, and entertainment in their own separate Lists. 
 
 
-
+#  .upper()
 
 from __future__ import print_function
 from ast import FloorDiv
@@ -21,11 +21,14 @@ can_continue = True
 
 # # (5 points): As a user, I want a destination to be randomly selected for my day trip.
 
+print("Welcome to the day trip Randomizer, where your trip is ... You guessed it, Randomized")
+print("Please take note of all the random choices as they will not be saved any longer after the program has completed running!!")
 
 
 def place_to_go():
     
     while can_continue is True:
+        print("Let's see where you'll be going")
         location = random.choice(destination)
         print(location)
 
@@ -48,13 +51,13 @@ user_destination = place_to_go()
 def where_to_eat():
 
     while can_continue is True:
-        Food = random.choice(resturant)
+        food = random.choice(resturant)
         print("Enjoy dining at " +random.choice(resturant)+"!")
         user_input = input("Do you like this choice? Please answer 'Yes' or 'No'")
         if user_input == answer:
              print("Great")
              print("Enjoy")
-             return Food
+             return food
         else:
              print("No worries. Let's try this again")
              
@@ -69,7 +72,7 @@ def how_to_get_there():
 
     while can_continue is True:
         transport = random.choice(mode_of_transport)
-        print("Your primary mode of transportation,while on this trip, will be "+ random.choice(mode_of_transport))
+        print("Your primary mode of transportation,while on this trip, will be"+ random.choice(mode_of_transport))
         user_input = input("Is this an acceptable option?")
         if user_input == answer:
             print("Awesome")
@@ -105,9 +108,9 @@ user_activity = what_to_do()
 # # (10 points): As a user, I want to be able to confirm that my day trip is “complete” once I like all of the random selections.
 
 def all_together():
-    print("You will be to " + user_destination)
+    print("You will be going to " + user_destination)
     print("You will be dining at "+ user_resturant)
-    print("Your primary road of transportation will be "+ user_means_of_transport)
+    print("Your primary mode of transportation will be "+ user_means_of_transport)
     print("If you ever get bored, try "+ user_activity)
 
 final_step = all_together()
@@ -116,5 +119,6 @@ print("Complete")
 
     
 
-# def where_to_go(something):
-#     loca =  print("Are you hapy with this choice?")
+# (10 points): As a user, I want to be able to confirm that my day trip is “complete” once I like all of the random selections.
+# The above functions have been modified to fit this prompt.
+# (5 points): Single Responsibility: As a developer, I want all of my functions to have a Single Responsibility. Remember, each function should do just one thing! 
