@@ -122,3 +122,8 @@ print("Complete")
 # (10 points): As a user, I want to be able to confirm that my day trip is “complete” once I like all of the random selections.
 # The above functions have been modified to fit this prompt.
 # (5 points): Single Responsibility: As a developer, I want all of my functions to have a Single Responsibility. Remember, each function should do just one thing! 
+
+
+
+def testing():
+    print
